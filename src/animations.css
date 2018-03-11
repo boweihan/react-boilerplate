@@ -1,0 +1,67 @@
+/* hover effects */
+.grow:hover {
+  transform: scale(1.1);
+}
+
+.grow:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(16, 110, 190);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  opacity: 0.2;
+}
+
+.grow:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(0.7);
+  transform: scaleX(0.7);
+}
+
+.reactboilerplate-iconButton:hover .reactboilerplate-iconButton-child {
+  font-weight: 700 !important;
+}
+
+.reactboilerplate-iconButton {
+  position: relative;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  box-shadow: inset 0 0 0 0.01px #008b47;
+}
+
+.reactboilerplate-iconButton:hover {
+  box-shadow: inset 100px 0 0 0 #009c49;
+}
+
+.reactboilerplate-menuButton:hover > div > div {
+  color: black !important;
+}
+
+.reactboilerplate-menuButton:hover > div > i {
+  color: black !important;
+}
+
+/* keyframe animations */
+.reactboilerplate-fadein {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

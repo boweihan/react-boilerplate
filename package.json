@@ -1,0 +1,53 @@
+{
+  "name": "js-addin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cuid": "^2.0.2",
+    "gulp-webserver": "^0.9.1",
+    "lodash": "^4.17.4",
+    "office-ui-fabric-react": "^5.42.0",
+    "raven-js": "^3.22.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.17",
+    "redux": "^3.7.2",
+    "redux-orm": "^0.9.4",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1",
+    "underscore": "^1.8.3"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer build/static/js/main.*",
+    "flow": "flow",
+    "precommit": "lint-staged",
+    "start":
+      "REACT_APP_BUILD_TYPE=local HTTPS=true PORT=8443 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "testcoverage": "react-scripts test --env=jsdom --coverage",
+    "eject": "react-scripts eject"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
+  },
+  "devDependencies": {
+    "babel-jest": "^22.4.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "flow-bin": "^0.63.1",
+    "gulp": "^3.9.1",
+    "gulp-replace": "^0.6.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.10.1",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-mock-store": "^1.5.1",
+    "run-sequence": "^2.2.1",
+    "sentry-cli-binary": "^1.25.0",
+    "sinon": "^4.3.0",
+    "source-map-explorer": "^1.5.0",
+    "yargs": "^11.0.0"
+  }
+}
